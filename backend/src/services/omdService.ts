@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 //const OMD_API_KEY = process.env.OMDB_API_KEY;
-const OMD_API_KEY = 'ad11a2c0';
-const OMDB_BASE_URL = 'http://www.omdbapi.com/'; // Asegúrate de usar "http" (no https)
+const OMD_API_KEY = process.env.OMDB_API_KEY;
+const OMDB_BASE_URL = process.env.OMDB_BASE_URL;
 
 export const getMoviesByTitle = async (query: string) => {
 

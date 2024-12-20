@@ -7,7 +7,7 @@ const OMDB_BASE_URL = 'http://www.omdbapi.com/'
 
 export const getMoviesByTitle = async (query: string) => {
 
-    const ApiFullUrl = `${OMDB_BASE_URL}?apikey=${OMD_API_KEY}&t=${query}&plot=full`;
+    const ApiFullUrl = `${OMDB_BASE_URL}?apikey=${OMD_API_KEY}&t=${query}&plot=full&type=movie`;
     const response = await axios.get(ApiFullUrl);
     let movies = response.data;
     return movies;

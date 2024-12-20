@@ -6,7 +6,7 @@ const router = Router();
 //#region  Search by title
 // Title: Oppenheimer
 router.get('/seach-by-title', async (req, res) => {
-    const { query } = req.body;
+    const { query } = req.query;
     if (!query) {
         return res.status(400).send('Query is required');
     }
@@ -24,7 +24,7 @@ router.get('/seach-by-title', async (req, res) => {
 // ID: 1262426 Movie: Wicked
 
 router.get('/search-by-imdb-id', async (req, res) => {
-    const { query } = req.body;
+    const { query } = req.query;
     if (!query) {
         return res.status(400).send('Query is required');
     }
